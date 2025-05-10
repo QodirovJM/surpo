@@ -12,10 +12,6 @@ async def root():
     return {"message": "Hello, World!"}
 
 
-@app.get("/greet/{name}")
-async def greet(name: str = "Alice"):
-    return {"message": f"Hello, {name}!"}
-
 @app.get("/search")
 async def search(query: str = "python"):
     return {"message": f"You searched for: {query}"}
